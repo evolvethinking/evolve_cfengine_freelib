@@ -158,7 +158,7 @@ bundle agent efl_bug1277(promiser_name, promisee_name, bundle_name, parameter)
 
    methods:
       "${promiser_name}" -> { "${promisee_name}" }
-         comment    => "Methods promises descirbed in methods.txt",
+         comment    => "Methods promises described in methods.txt",
          handle     => "efl_bug1277_methods_loop",
          usebundle  => ${bundle_name}( "${parameter}" );
 }
@@ -919,7 +919,7 @@ bundle agent efl_service ( ref )
 
       "${svc[${s}][2]}" -> { "${svc[${s}][9]}" }
          comment    => "Promise permissions of configuration file",
-         handle     => "efl_service_files_config_template",
+         handle     => "efl_service_files_config_template_permissions",
          ifvarclass => "${svc[${s}][0]}",
          perms      => mog(
             "${svc[${s}][5]}",
@@ -1005,7 +1005,7 @@ bundle agent efl_chkconfig_enable_service ( ref )
 
    reports:
       !_stdlib_path_exists_chkconfig::
-         "Promise ${this.handle} reports ${paths.path[chkconfig]} is not found.",
+         "Promise ${this.handle} reports ${paths.path[chkconfig]} is not found."
             handle => "efl_chkconfig_enable_service_reports_no_chkconfig";
 }
 
@@ -1072,7 +1072,7 @@ bundle agent efl_chkconfig_disable_service ( ref )
 
    reports:
       !_stdlib_path_exists_chkconfig::
-         "Promise ${this.handle} reports ${paths.path[chkconfig]} is not found.",
+         "Promise ${this.handle} reports ${paths.path[chkconfig]} is not found."
             handle => "efl_chkconfig_disable_service_reports_no_chkconfig";
 }
 
@@ -1117,15 +1117,15 @@ bundle agent efl_file_perms ( ref )
             ifvarclass => "${files[${f}][0]}",
             expression => strcmp( "no", "${files[${f}][2]}" );
          
-         "efl_negaive_match_${files[${f}][1]}"
+         "efl_negative_match_${files[${f}][1]}"
             comment => "Is negative match desired?",
             handle => "efl_files_perms_classes_negate",
             ifvarclass => "${files[${f}][0]}",
             expression => strcmp( "yes", "${files[${f}][4]}" );
 
          "efl_positive_match_${files[${f}][1]}"
-            comment => "Is negative match desired?",
-            handle => "efl_files_perms_classes_negate",
+            comment => "Is positive match desired?",
+            handle => "efl_files_perms_classes_positive",
             ifvarclass => "${files[${f}][0]}",
             expression => strcmp( "no", "${files[${f}][4]}" );
 
@@ -1154,7 +1154,7 @@ bundle agent efl_file_perms ( ref )
 
          "${files[${f}][1]}" -> { "${files[${f}][8]}" }
             comment      => "Promise permissions using positive match",
-            handle       => "efl_files_perms_files_postive",
+            handle       => "efl_files_perms_files_positive",
             ifvarclass   => and(
                canonify( "efl_no_recurse_${files[${f}][1]}" ),
                canonify( "efl_positive_match_${files[${f}][1]}")
@@ -1252,7 +1252,7 @@ bundle agent efl_lastseen
 
    reports:
       cfengine::
-         "${last_seen_hosts}",
+         "${last_seen_hosts}"
             handle => "efl_lastseen_reports_hosts";
 }
 
@@ -1272,7 +1272,7 @@ bundle agent efl_notseen
 
    reports:
       cfengine::
-         "${last_seen_hosts}",
+         "${last_seen_hosts}"
             handle => "efl_notseen_reports_hosts";
 }
 

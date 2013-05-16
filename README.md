@@ -28,8 +28,8 @@ A skeleton bundle is provided for those that wish to create new bundles.
 Requirements
 
 Cfengine Core 3.4.x or higher
-cfengine_stdlib.cf
+cfengine_stdlib.cf ( https://raw.github.com/cfengine/core/master/masterfiles/libraries/cfengine_stdlib.cf )
 
 Known issues
 
-Parameter data files cannot contain variables at this time due to Cfengine bug 2333.
+Parameter data files cannot contain variables at this time due to Cfengine bug 2333. (https://cfengine.com/dev/issues/2333)
