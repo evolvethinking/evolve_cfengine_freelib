@@ -1,0 +1,4 @@
+# This file contains the bundles to call and the data files to use for each bundle
+# class/context ;; promiser ;; bundle_name ;; ifelapsed ;; data_file        ;; promisee
+any             ;; promiser ;; efl_command ;; 5         ;; command_data.txt ;; Jean Remond
+any             ;; promiser ;; efl_link    ;; 1         ;; link_data.txt    ;; Jean Remond

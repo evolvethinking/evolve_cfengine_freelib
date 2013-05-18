@@ -1,0 +1,10 @@
+body common control
+{
+     bundlesequence  => { 
+                          efl_main("bundle.txt"), 
+                        };
+     inputs          => { 
+                          "libraries/evolve_freelib.cf", 
+                          "libraries/cfengine_stdlib.cf",
+                        };
+}

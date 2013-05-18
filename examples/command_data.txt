@@ -1,0 +1,2 @@
+# context       ;; command                  ;; use shell ;; module ;; ifelapsed ;; promisee
+any             ;; /usr/bin/touch /tmp/orig ;; in_shell  ;; false  ;; 5         ;; Jean Remond

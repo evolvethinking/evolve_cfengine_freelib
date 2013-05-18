@@ -1,0 +1,5 @@
+# context       ;; link name  ;; link source ;; link type ;; promisee
+any             ;; /tmp/dest1 ;; /tmp/orig   ;; symlink   ;; Jean Remond
+cf1_example_com ;; /tmp/dest2 ;; /tmp/orig   ;; relative  ;; Jean Remond
+example_com     ;; /tmp/dest3 ;; /tmp/orig   ;; hardlink  ;; Jean Remond
+undefined_class ;; /tmp/dest4 ;; /tmp/orig   ;; absolute  ;; Jean Remond
